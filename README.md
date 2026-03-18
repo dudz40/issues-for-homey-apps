@@ -3,6 +3,6 @@ Start opening an issue by clicing the issues menu in the bar above and provide a
 
 As this is a single repository for my apps, please add labels.
 
-Select label for affected APP first, starts with APP.
+Select label for affected APP first, those labels start with APP.
 
 Then select the label for the issue you need to report for the app
