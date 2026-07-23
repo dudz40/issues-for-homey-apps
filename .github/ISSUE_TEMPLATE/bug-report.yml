@@ -23,7 +23,7 @@ body:
   - type: textarea
     id: steps
     attributes:
-      label: Issue desription
+      label: Issue description
       description: Tell us exactly what the issue is.
     validations:
       required: true
