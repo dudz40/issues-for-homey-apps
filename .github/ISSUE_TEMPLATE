@@ -1,0 +1,36 @@
+name: 🐛 Bug Report
+description: File a bug report to help us improve
+title: "[Bug]: "
+labels: ["bug", "triage-needed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: version
+    attributes:
+      label: Software Version
+      description: What version of the software are you using?
+      placeholder: e.g., v1.4.2
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Tell us exactly how to make the bug happen.
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. See error...
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low (Cosmetic issue)
+        - Medium (Annoying but usable)
+        - High (App crashes/blocks work)
