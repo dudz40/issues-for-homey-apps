@@ -12,12 +12,12 @@ body:
       label: What APP is this issue about?
       description: Select an app to automatically tag this issue.
       options:
-        - Aseko
-        - Homekit Controller
-        - Rachio
-        - SmartThinQ
-        - TadoZones
-        - Worx
+        - APP ASEKO
+        - APP HOME CONTROLLER
+        - APP RACHIO
+        - APP SMARTTHINQ
+        - APP TADOZONES
+        - APP WORX
     validations:
       required: true
   - type: textarea
