@@ -1,21 +1,35 @@
-name: Auto Labeler
-
+name: Issue labeler
 on:
   issues:
-    types: [opened]
+    types: [ opened ]
+
+permissions:
+  contents: read
 
 jobs:
-  apply-labels:
+  label-component:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-    steps:
-      - name: Checkout repository code
-        uses: actions/checkout@v4
 
-      - name: Parse dropdown and apply label
-        uses: andymckay/labeler@1.0.4
+    permissions:
+      # required for all workflows
+      issues: write
+
+      # only required for workflows in private repositories
+      actions: read
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Parse issue form
+        uses: stefanbuck/github-issue-parser@v3
+        id: issue-parser
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          # This config file holds your translation rules from File 2
-          configuration-path: .github/labeler-config.yml
+          template-path: .github/ISSUE_TEMPLATE/bug.yml
+
+      - name: Set labels based on APP fields
+        uses: redhat-plumbers-in-action/advanced-issue-labeler@v2
+        with:
+          issue-form: ${{ steps.issue-parser.outputs.jsonString }}
+          section: label-dropdown
+          token: ${{ secrets.GITHUB_TOKEN }}
