@@ -1,12 +1,12 @@
 name: 🐛 Bug Report
-description: File a bug report to help us improve
-title: "[Bug]: "
-labels: ["bug", "triage-needed"]
+description: File an issue report to help me improve
+title: "[Issue]: "
+labels: ["APP ASEKO", "APP HOMEKIT CONTROLLER", "APP RACHIO", "APP SMARTTHINQ", "APP TADOZONES", "APP WORX"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to fill out this issue report!
   - type: input
     id: version
     attributes:
