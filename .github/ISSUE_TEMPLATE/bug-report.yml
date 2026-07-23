@@ -1,29 +1,30 @@
 name: 🐛 Bug Report
 description: File an issue report to help me improve
 title: "[Issue]: "
-labels: ["APP ASEKO", "APP HOMEKIT CONTROLLER", "APP RACHIO", "APP SMARTTHINQ", "APP TADOZONES", "APP WORX"]
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this issue report!
-  - type: input
-    id: version
+  - type: dropdown
+    id: label-dropdown
     attributes:
-      label: Software Version
-      description: What version of the software are you using?
-      placeholder: e.g., v1.4.2
+      label: What APP is this issue about?
+      description: Select an option to automatically tag this issue.
+      options:
+        - Aseko
+        - Homekit Controller
+        - Rachio
+        - SmartThinQ
+        - TadoZones
+        - Worx
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
       label: Steps to Reproduce
-      description: Tell us exactly how to make the bug happen.
-      placeholder: |
-        1. Go to...
-        2. Click on...
-        3. See error...
+      description: Tell us exactly what the issue is.
     validations:
       required: true
   - type: dropdown
