@@ -10,7 +10,7 @@ body:
     id: label-dropdown
     attributes:
       label: What APP is this issue about?
-      description: Select an option to automatically tag this issue.
+      description: Select an app to automatically tag this issue.
       options:
         - Aseko
         - Homekit Controller
